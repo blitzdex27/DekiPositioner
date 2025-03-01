@@ -78,12 +78,20 @@ private func calculateCenterPositionXorY(
     return centerMultiplyingFactor
 }
 
-public struct BaseYDimensions {
-    let topOffset: CGFloat
-    let bottomOffset: CGFloat
-}
-
 public struct BaseXDimensions {
     let leadingOffset: CGFloat
     let trailingOffset: CGFloat
+    public init(leadingOffset: CGFloat, trailingOffset: CGFloat) {
+        self.leadingOffset = leadingOffset
+        self.trailingOffset = trailingOffset
+    }
+}
+
+public struct BaseYDimensions {
+    let topOffset: CGFloat
+    let bottomOffset: CGFloat
+    public init(topOffset: CGFloat, bottomOffset: CGFloat) {
+        self.topOffset = topOffset
+        self.bottomOffset = bottomOffset
+    }
 }
